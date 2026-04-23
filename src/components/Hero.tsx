@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ChevronRight, FileText } from "lucide-react";
 import { GithubIcon as Github } from "./Icons";
+import { Terminal } from "./Terminal";
 
 const Hero = () => {
   return (
@@ -83,29 +84,14 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Terminal Preview (Visual Decoration) */}
+      {/* Interactive Terminal */}
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 40 }}
         transition={{ duration: 1, delay: 0.5 }}
-        className="w-full max-w-4xl px-6 mt-20"
+        className="w-full max-w-4xl px-6 mt-20 relative z-20 h-[350px]"
       >
-        <div className="glass rounded-t-xl border-b-0 overflow-hidden shadow-2xl">
-          <div className="flex items-center gap-2 px-4 py-3 bg-white/5 border-b border-white/10">
-            <div className="w-3 h-3 rounded-full bg-red-500/50" />
-            <div className="w-3 h-3 rounded-full bg-yellow-500/50" />
-            <div className="w-3 h-3 rounded-full bg-green-500/50" />
-            <span className="ml-4 text-[10px] font-mono text-muted uppercase tracking-widest">toshith@systems: ~/portfolio</span>
-          </div>
-          <div className="p-6 font-mono text-sm space-y-2 opacity-80">
-            <p className="text-primary">$ ./fetch-experience.sh</p>
-            <p className="text-muted">{">"} Loading project metadata...</p>
-            <p className="text-muted">{">"} Establishing connection to AWS... OK</p>
-            <p className="text-muted">{">"} Mounting Docker volumes... OK</p>
-            <p className="text-muted">{">"} Portfolio systems online.</p>
-            <p className="text-primary">$ _</p>
-          </div>
-        </div>
+        <Terminal />
       </motion.div>
     </section>
   );
