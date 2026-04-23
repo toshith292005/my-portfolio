@@ -8,7 +8,7 @@ import { Terminal } from "./Terminal";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center pt-20 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col items-center justify-center pt-32 md:pt-20 overflow-hidden">
       {/* Background Grid */}
       <div className="absolute inset-0 grid-bg pointer-events-none opacity-40" />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background pointer-events-none" />
@@ -16,7 +16,7 @@ const Hero = () => {
       {/* Decorative Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/20 blur-[120px] rounded-full pointer-events-none" />
 
-      <div className="container mx-auto px-6 relative z-10 text-center">
+      <div className="container mx-auto px-6 relative z-10 text-center mt-24 md:mt-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -56,29 +56,23 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <a
-            href="#projects"
-            className="group px-8 py-3 bg-primary text-background font-bold rounded-lg flex items-center gap-2 hover:neon-glow transition-all active:scale-95"
-          >
-            View Projects
-            <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
-          </a>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://github.com"
+              href="#projects"
+              className="px-8 py-3 bg-primary text-background font-bold rounded-lg flex items-center gap-2 hover:scale-105 transition-all shadow-[0_0_20px_#06b6d440]"
+            >
+              View Projects
+              <ChevronRight size={20} />
+            </a>
+            <a
+              href="https://github.com/toshith292005"
+              target="_blank"
+              rel="noreferrer"
               className="px-6 py-3 glass rounded-lg flex items-center gap-2 hover:bg-white/10 transition-all active:scale-95 font-medium"
             >
               <Github size={20} />
               GitHub
-            </a>
-            <a
-              href="#"
-              className="px-6 py-3 glass rounded-lg flex items-center gap-2 hover:bg-white/10 transition-all active:scale-95 font-medium"
-            >
-              <FileText size={20} />
-              Resume
             </a>
           </div>
         </motion.div>
