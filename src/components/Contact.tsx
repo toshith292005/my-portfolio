@@ -21,11 +21,11 @@ const Contact = () => {
               </p>
               
               <div className="space-y-6">
-                <a href="mailto:contact@example.com" className="flex items-center gap-4 group">
+                <a href="mailto:saitoshith.aleti@gmail.com" className="flex items-center gap-4 group">
                   <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center group-hover:bg-primary group-hover:text-background transition-all">
                     <Mail size={20} />
                   </div>
-                  <span className="text-sm font-medium">contact@example.com</span>
+                  <span className="text-sm font-medium">saitoshith.aleti@gmail.com</span>
                 </a>
                 <a href="https://linkedin.com" className="flex items-center gap-4 group">
                   <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center group-hover:bg-primary group-hover:text-background transition-all">

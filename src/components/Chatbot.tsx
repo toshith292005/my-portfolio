@@ -42,9 +42,9 @@ const Chatbot = () => {
       } else if (query.includes("mail scraper")) {
         response = "The Mail Scraper SaaS is a production-grade tool for automated lead discovery with Gmail integration and AI-powered replies. It uses BullMQ and Redis for background processing.";
       } else if (query.includes("contact") || query.includes("email")) {
-        response = "You can reach Toshith via the contact form on this page or directly at contact@example.com.";
+        response = "You can reach Toshith via the contact form on this page or directly at saitoshith.aleti@gmail.com.";
       } else if (query.includes("resume")) {
-        response = "You can download his full resume from the link in the Hero section of this website.";
+        response = "Toshith's resume is currently available upon request. Feel free to contact him directly at saitoshith.aleti@gmail.com.";
       }
 
       setMessages((prev) => [...prev, { role: "assistant", content: response }]);
